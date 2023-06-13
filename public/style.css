@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --container-background-color-color-left: #0e1c26;
+    --container-background-color-color-middle: #2a454b;
+    --container-background-color-color-right: #294861;
+    --input-command-background-color-left: #727a9a;
+    --input-command-background-color-right: #d8dbe9;
+    --input-command-button-background-color-left: #7ef29d;
+    --input-command-button-background-color-right: #0f68a9;
+    --gpt-input-command-background-color-left: #727a9a;
+    --gpt-input-command-background-color-right: #d8dbe9;
+    --gpt-output-response-background-color-left: #7ef29d;
+    --gpt-output-response-background-color-right: #0f68a9;
+}
+#container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom right, var(--container-background-color-color-left),var(--container-background-color-color-right));
+    display: flex;
+    align-items: flex-start;
+    overflow: scroll;
+}
+#conversations-container {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 5rem;
+    gap: 1rem;
+    width: 100vw;
+    overflow-y: auto;
+}
+.gpt-input-command {
+    align-self: flex-end;
+    background: linear-gradient(to top right, var(--gpt-input-command-background-color-left), var(--gpt-input-command-background-color-right));
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem 0rem 0.5rem 0.5rem;
+}
+.gpt-output-response {
+    background: linear-gradient(to bottom right, var(--gpt-output-response-background-color-left), var(--gpt-output-response-background-color-right));
+    padding: 0.5rem 1rem;
+    align-self: flex-start;
+    border-radius: 0rem 0.5rem 0.5rem 0.5rem;
+    color: black;
+
+}
+#input-container {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 0.8rem;
+}
+#input-command {
+    width: 100%;
+    outline: none;
+    background: linear-gradient(to top right, var(--input-command-background-color-left), var(--input-command-background-color-right));
+    border: none;
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+#input-command-button {
+    width: 100%;
+    background: linear-gradient(to bottom right, var(--input-command-button-background-color-left), var(--input-command-button-background-color-right));
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
